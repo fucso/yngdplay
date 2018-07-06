@@ -30,6 +30,19 @@ create table constructor_type (
   constraint pk_constructor_type primary key (id)
 );
 
+create table site (
+  id                            integer auto_increment not null,
+  hidden_at                     datetime(6),
+  site_name                     varchar(50),
+  constractor                   integer not null,
+  transport_cost                integer not null,
+  start_at                      datetime(6) not null,
+  finish_at                     datetime(6),
+  create_at                     datetime(6) not null,
+  update_at                     datetime(6) not null,
+  constraint pk_site primary key (id)
+);
+
 
 # --- !Downs
 
@@ -38,4 +51,6 @@ drop table if exists color_palette;
 drop table if exists constructor;
 
 drop table if exists constructor_type;
+
+drop table if exists site;
 
