@@ -3,14 +3,16 @@
 
 # --- !Ups
 
-create table test_table (
-  id                            bigint auto_increment not null,
-  name                          varchar(255),
-  constraint pk_test_table primary key (id)
+create table color_palette (
+  id                            integer auto_increment not null,
+  color_code                    varchar(6) not null,
+  create_at                     datetime(6) not null,
+  update_at                     datetime(6) not null,
+  constraint pk_color_palette primary key (id)
 );
 
 
 # --- !Downs
 
-drop table if exists test_table;
+drop table if exists color_palette;
 
