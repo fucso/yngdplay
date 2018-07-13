@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 
 import models.AbstractMasterModel;
+import models.constructor.Constructor;
 
 @Entity
 public class Site extends AbstractMasterModel{
@@ -15,8 +16,8 @@ public class Site extends AbstractMasterModel{
 	@Column(length=50)
 	public String siteName;
 
-	@ManyToOne(cascade = CascadeType.ALL)
-	public int constractor;
+	@ManyToOne(cascade = CascadeType.ALL, optional=false)
+	public Constructor constractor;
 
 	@Column(nullable=false)
 	public int transportCost;

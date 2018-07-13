@@ -14,3 +14,5 @@ libraryDependencies ++= Seq(evolutions, javaJdbc)
 lazy val myProject = (project in file("."))
   .enablePlugins(PlayJava, PlayEbean)
 libraryDependencies += "mysql" % "mysql-connector-java" % "5.1.41"
+
+libraryDependencies += javaForms
