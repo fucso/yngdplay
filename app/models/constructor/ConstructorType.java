@@ -1,3 +1,7 @@
+/**
+ * @author hosoki
+ * ゼネコンを分類するためのタイプのモデル
+ */
 package models.constructor;
 
 import java.util.*;
