@@ -1,0 +1,13 @@
+@(constructor:List[models.constructor.ConstructorType])
+@views.html.main("list"){
+
+
+<h2>constructor list</h2>
+
+	@for(constructorList <- constructor) {
+		<span>@constructorList.id</span>
+		<span>@constructorList.typeName</span>
+		<span>@constructorList.createAt</span>
+		<span>@constructorList.updateAt</span>
+	}
+}
